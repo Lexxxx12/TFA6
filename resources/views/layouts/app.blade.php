@@ -26,7 +26,7 @@
                         <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[0.65rem] font-bold tracking-[0.16em] text-teal-200 uppercase lg:hidden">Laravel</span>
                     </div>
 
-                    <nav class="grid grid-cols-2 gap-2 sm:flex sm:overflow-x-auto sm:pb-1 lg:grid" aria-label="Main navigation">
+                    <nav class="grid grid-cols-2 gap-2 sm:flex sm:overflow-x-auto sm:pb-1 lg:grid lg:grid-cols-1" aria-label="Main navigation">
                         @php
                             $navigation = [
                                 ['route' => 'home', 'label' => 'Overview', 'icon' => '⌂'],
