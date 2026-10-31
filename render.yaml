@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: tfa6
+    runtime: docker
+    plan: free
+    branch: main
+    healthCheckPath: /
+    autoDeployTrigger: commit
+    envVars:
+      - key: APP_NAME
+        value: SariPOS
+      - key: DB_CONNECTION
+        value: sqlite
+      - key: DB_DATABASE
+        value: /var/www/html/database/database.sqlite
+      - key: QUEUE_CONNECTION
+        value: sync
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "false"
+      - key: LOG_CHANNEL
+        value: stderr
+      - key: SESSION_DRIVER
+        value: cookie
+      - key: CACHE_STORE
+        value: array
